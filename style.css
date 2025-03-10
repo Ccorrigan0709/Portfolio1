@@ -116,6 +116,15 @@ nav ul li a:hover::after{
     color: #ababab;  /* Ensures text color matches your theme */
 }
 
+.exp {
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1;
+    text-align: justify;
+    color: #ababab;
+    font-size: 13px; 
+}
+
 .tab-titles{
     display: flex;
     margin: 20px 0 40px;
