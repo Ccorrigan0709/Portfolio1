@@ -275,13 +275,18 @@ nav ul li a:hover::after{
     flex: 1;
     min-width: 400px; /* Increase the minimum width */
     max-width: 600px; /* Allows more horizontal space */
-    height: 150px; /* Makes the boxes thinner */
     display: flex;
     flex-direction: column;
     justify-content: center; /* Centers text inside */
     align-items: center;
     transition: background 0.5s, transform 0.5s;
     box-sizing: border-box; /* Ensures padding doesn’t affect size */
+}
+
+.work p {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
 }
 
 
