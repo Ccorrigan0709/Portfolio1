@@ -427,8 +427,9 @@ nav .fas{
         background-image: url(images/headshot_circle.jpg);
     }
     .header-text{
-        margin-top: 100%;
+        margin-top: 120%;
         font-size: 16px;
+        padding-top: 20px; 
     }
     .header-text h1{
         font-size: 30px;
