@@ -32,7 +32,7 @@ nav{
 }
 
 .logo {
-    width: 200px; /* Set the width to make the image smaller */
+    width: 400px; /* Set the width to make the image smaller */
     height: auto; /* Maintain aspect ratio */
     display: block; /* Ensures it behaves like a block element */
 }
@@ -103,6 +103,11 @@ nav ul li a:hover::after{
 .about-col-1 img{
     width: 100%;
     border-radius: 15px; 
+}
+
+.about-col-2 {
+    flex-basis: 58%;  /* gives some room back */
+    padding-left: 2%; /* nudges text without pushing total width too far */
 }
 
 .sub-title{
