@@ -11,21 +11,21 @@
 <div id="header"> 
     <div class="container">
         <nav>
-            <img src="images/logo.png" class="logo">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contact</a></li>
-                <i class="fa-solid fa-xmark"></i>
+            <img src="images/Connor.png" class="logo">
+            <ul id = "sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick = "closemenu()"></i>
             </ul>
-            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-bars" onclick = "openmenu()"></i>
         </nav>
         <div class="header-text">
             <p>Software Engineer</p>
             <h1>Hi, my name is <span>Connor</span></h1>
-            <h1>Welcome to my Website</h1>
+            <h1>Welcome to my Website!</h1>
         </div> 
     </div>
 
@@ -47,9 +47,9 @@
                     </p>
 
                     <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links active-link" onclick="opentab('skills', event)">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience', event)">Experience</p>
+                        <p class="tab-links" onclick="opentab('education', event)">Education</p>
                     </div> 
                     <div class="tab-contents active-tab" id="skills">
                         <ul>
@@ -86,7 +86,7 @@
 <!-------- Services-------------->
 <div id="services">
     <div class = "container">
-        <h1 class=""sub-title">My Services</h1>
+        <h1 class="sub-title">My Services</h1>
         <div class="services-list">
             <div>
                 <i class="fa-regular fa-file-code"></i>
@@ -130,7 +130,7 @@
                 <a href="#"><i class="fa-solid fa-link"></i></a>
             </div>
         </div>
-        <a href="#" class="btn">See more</a>
+        <a href="https://github.com/ccorrigan0709" class="btn">See more</a>
     </div>
 </div>
 
@@ -149,12 +149,13 @@
                 <a href="images/Resume for Snowflake.docx (2).pdf" download class="btn btn2 ">Download CV</a>
             </div>
             <div class="contact-right">
-                <form>
+                <form action="https://formspree.io/f/mldjzrrn" method="POST">
                     <input type="text" name="Name" placeholder="Your Name" required>
                     <input type="email" name="email" placeholder="Your Email" required>
                     <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
                     <button type="submit" class="btn btn2">Submit</button>
                 </form>
+                <span id="msg">Message Sent Successfully</span>
             </div>
         </div>
     </div>
@@ -170,7 +171,7 @@
 var tablinks = document.getElementsByClassName("tab-links");
 var tabcontents = document.getElementsByClassName("tab-contents");
 
-function opentab(tabname) {
+function opentab(tabname, event) {
     for (let tablink of tablinks) {
         tablink.classList.remove("active-link");
     }
@@ -182,6 +183,61 @@ function opentab(tabname) {
 }
     
 </script>
+
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu() {
+        sidemenu.style.right = "0";
+    }
+    function closemenu() {
+        sidemenu.style.right = "-200px";
+    }
+
+</script>
+
+<script>
+    document.querySelector("form").addEventListener("submit", function(e) {
+        e.preventDefault(); // Prevent default form submission
+    
+        const form = this;
+        const msg = document.getElementById("msg");
+    
+        // Hide the message initially just to be safe
+        msg.style.display = "none";
+    
+        // Send the form data using Formspree
+        fetch(form.action, {
+            method: form.method,
+            body: new FormData(form),
+            headers: {
+                'Accept': 'application/json'
+            }
+        }).then(response => {
+            if (response.ok) {
+                // Clear the form fields
+                form.reset();
+    
+                // Show the success message
+                msg.innerText = "Message Sent Successfully";
+                msg.style.display = "block";
+    
+                // Hide the message after 5 seconds
+                setTimeout(() => {
+                    msg.style.display = "none";
+                }, 5000);
+            } else {
+                msg.innerText = "Something went wrong.";
+                msg.style.display = "block";
+            }
+        }).catch(error => {
+            msg.innerText = "Failed to send message.";
+            msg.style.display = "block";
+        });
+    });
+    </script>
+    
+    
 
 </body>
 </html>
