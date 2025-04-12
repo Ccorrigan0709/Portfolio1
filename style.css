@@ -490,3 +490,10 @@ nav .fas{
     display: none; 
 }
 
+.logo {
+    width: 80%; /* Shrinks the image on small screens */
+    max-width: 300px; /* Prevents it from getting too large */
+    margin: 0 auto; /* Centers it horizontally */
+    display: block; /* Ensures margin auto works */
+}
+
