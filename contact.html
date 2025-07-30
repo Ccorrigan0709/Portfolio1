@@ -35,7 +35,9 @@
                     <a href="https://www.linkedin.com/in/connor-corrigan-93b747200/">
                         <i class="fa-brands fa-linkedin"></i></a>
                 </div>
-                <a href="images/Resume for Snowflake.docx (2).pdf" download class="btn btn2">Download CV</a>
+                <a href="images/2025_Resume.pdf" download="Connor_Corrigan_Resume.pdf" class="btn btn2" onclick="downloadCV(event)">
+                    <i class="fa-solid fa-download"></i> Download CV
+                </a>
             </div>
             <div class="contact-right">
                 <form action="https://formspree.io/f/mldjzrrn" method="POST">
@@ -84,6 +86,38 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+// CV Download function
+function downloadCV(event) {
+    event.preventDefault();
+    
+    // Show loading state
+    const button = event.target.closest('a');
+    const originalText = button.innerHTML;
+    button.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Downloading...';
+    button.style.background = '#ff004f';
+    
+    // Simple direct download approach
+    const link = document.createElement('a');
+    link.href = 'images/2025_Resume.pdf';
+    link.download = 'Connor_Corrigan_Resume.pdf';
+    link.style.display = 'none';
+    
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    
+    // Show success message
+    setTimeout(() => {
+        button.innerHTML = '<i class="fa-solid fa-check"></i> Downloaded!';
+        button.style.background = '#61b752';
+        
+        setTimeout(() => {
+            button.innerHTML = originalText;
+            button.style.background = '';
+        }, 2000);
+    }, 500);
+}
 </script>
 </body>
 </html> 
