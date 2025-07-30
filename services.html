@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+<div class="page-transition"></div>
 <nav>
     <div class="logo-group">
         <span class="logo-text">Connor Corrigan</span>
@@ -45,5 +46,39 @@
         </div>
     </div>
 </div>
+
+<script>
+// Mobile menu functionality
+var sidemenu = document.getElementById("sidemenu");
+
+function openmenu(){
+    sidemenu.style.right = "0";
+}
+
+function closemenu(){
+    sidemenu.style.right = "-200px";
+}
+
+// Page transition functionality
+function navigateWithTransition(url) {
+    const transition = document.querySelector('.page-transition');
+    transition.classList.add('active');
+    
+    setTimeout(() => {
+        window.location.href = url;
+    }, 300);
+}
+
+// Add transition to all navigation links
+document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('nav a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            navigateWithTransition(this.href);
+        });
+    });
+});
+</script>
 </body>
 </html> 
