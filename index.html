@@ -3,244 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Connor Corrigan | Home</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/d99f3219d2.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <style>
+        .typing-cursor {
+            display: inline-block;
+            font-weight: bold;
+            font-size: 2rem;
+            color: #fff !important;
+            animation: blink 1s steps(1) infinite;
+            vertical-align: bottom;
+        }
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+        .logo-typing {
+            font-weight: normal !important;
+            font-size: 1.5rem;
+            color: #fff;
+            vertical-align: middle;
+            display: inline-block !important;
+            margin-left: 10px;
+        }
+        .logo-group {
+            display: flex !important;
+            align-items: center !important;
+            flex-direction: row !important;
+            gap: 10px; /* Optional: space between name and title */
+        }
+        .logo-text {
+            font-weight: bold;
+            color: #ff004f;
+            font-size: 2rem;
+            margin-left: 20px;
+            margin-right: 0;
+            display: inline-block !important;
+        }
+        .logo-typing {
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: #fff;
+            vertical-align: middle;
+            display: inline-block !important;
+        }
+        nav .logo-typing {
+            font-weight: normal !important;
+        }
+        #fade-in-greeting {
+            opacity: 0;
+            font-size: 1.2rem; /* or your preferred size */
+            animation: fadeInFromDark 1s ease-in forwards;
+            animation-delay: 0.2s;
+        }
+
+        @keyframes fadeInFromDark {
+            0% {
+                opacity: 0;
+                color: #080808;
+            }
+            60% {
+                opacity: 0.5;
+                color: #444;
+            }
+            100% {
+                opacity: 1;
+                color: #fff;
+            }
+        }
+    </style>
 </head>
 <body>
+<nav>
+    <div class="logo-group">
+        <span class="logo-text">Connor Corrigan</span>
+        <span class="logo-typing">Software Engineer</span>
+    </div>
+    <ul id="sidemenu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact Me</a></li>
+    </ul>
+    <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+</nav>
 <div id="header"> 
     <div class="container">
-        <nav>
-            <img src="images/Connor.png" class="logo">
-            <ul id = "sidemenu">
-                <li><a href="#header">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <i class="fa-solid fa-xmark" onclick = "closemenu()"></i>
-            </ul>
-            <i class="fa-solid fa-bars" onclick = "openmenu()"></i>
-        </nav>
         <div class="header-text">
-            <p>Software Engineer</p>
-            <h1>Hi, my name is <span>Connor</span></h1>
-            <h1>Welcome to my Website!</h1>
-        </div> 
-    </div>
-
-
-</div>
-<div id="about">
-    <div class="container">
-        <div class="row">
-            <div class="about-col-1">
-                <img src="images/user.jpg">
-            </div>
-            <div class="about-col-2">
-                <h1 class="sub-title">About Me</h1>
-                <p class="hello"> Hello! I’m Connor Corrigan, a passionate software developer from Japan with a focus on building user-friendly applications. I specialize in web and mobile development, leveraging languages like Java, Python, Javascript, Tensorflow, and frameworks such as React and Android Studio. My goal is to create scalable applications that can benefit users around the globe.
-
-                    I am currently studying Computer Science at Georgia Tech. 
-                    When I'm not coding, you can find me contributing to open-source projects, wrestling, or playing tennis.  I am always eager to learn, grow, and collaborate with like-minded developers to create impactful software.
-                    If you're interested in collaborating or have any questions, don't hesitate to reach out!
-                    </p>
-
-                    <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('skills', event)">Skills</p>
-                        <p class="tab-links" onclick="opentab('experience', event)">Experience</p>
-                        <p class="tab-links" onclick="opentab('education', event)">Education</p>
-                    </div> 
-                    <div class="tab-contents active-tab" id="skills">
-                        <ul>
-                            <li><span>UI/UX'</span><br>Designing Web/App interfaces</li>
-                            <li><span>Web Development</span><br>Web App Development</li>
-                            <li><span>App Development</span><br>Building Android/IOS Apps</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="experience">
-                        <ul>
-                            <li><span>2023-2024</span><br>Systems T.A. at the University of Georgia
-                            </li>
-                            <li><span>June, 2023 - August,2023</span><br>Software Engineer at Computer Futures, Sthree</li>
-                            <li><span>2023-2024 </span><br>Lead Project Engineer at Codehub</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="education">
-                        <ul>
-                            <li><span>2024-2026</span><br>Georgia Institute of Technology - Bachelor of Science in Computer Science</li>
-                            <li><span>Course Work:</span><br>
-                            <p>Data Structures and Algorithms, Linear Algebra, Computer Organization and Programming,</p>
-                            <p>Objects and Design, Information Technology, Discrete Mathematics, Systems Programming </p>
-                            </li>
-                            <li><span>Involvement:</span><br>
-                                <p>Association of Computing Machinery, Investment Management Club,</p>
-                                <p>Georgia Tech International Ambassador</p>
-                            </li>
-                        </ul>
-                    </div>
-            </div>
+            <p id="fade-in-greeting">Hi, my name is</p>
+            <h1 id="typing-greeting"></h1>
         </div>
     </div>
 </div>
-<!-------- Services-------------->
-<div id="services">
-    <div class = "container">
-        <h1 class="sub-title">My Services</h1>
-        <div class="services-list">
-            <div>
-                <i class="fa-regular fa-file-code"></i>
-                <h2>Web Design</h2>
-                <p> 
-                </p>
-
-            </div>
-            <div>
-                <i class="fa-solid fa-code-fork"></i>
-                <h2>UI/UX Design</h2>
-                <p> 
-                </p>
-
-            </div>
-            <div>
-                <i class="fa-solid fa-qrcode"></i>
-                <h2>App Design</h2>
-                <p> 
-                </p>
-
-            </div>
-        </div>
-    </div>
-
-</div>
-
-<!----------------portfolio------------->
-<div id="portfolio">
-    <div class="container">
-        <h1 class="sub-title">My Work</h1>
-        <div class="work-list">
-            <div class="work">
-                <h3>Word Definer Google Extension</h3>
-                <p>A real-time word definition feature using JavaScript and HTML, enabling users to hover over any text and instantly view definitions inline, enhancing content comprehension and user engagement.</p>
-                <a href="#"><i class="fa-solid fa-link"></i></a>
-            </div>
-            <div class="work">
-                <h3>Car Price Evaluator</h3>
-                <p>Developed and deployed a Python-based algorithm that evaluates a car’s listed price against aggregated market values, leveraging Python libraries (Pandas, NumPy) for data analytics and Google Cloud APIs for scalable, on-demand data retrieval.</p>
-                <a href="#"><i class="fa-solid fa-link"></i></a>
-            </div>
-        </div>
-        <a href="https://github.com/ccorrigan0709" class="btn">See more</a>
-    </div>
-</div>
-
-<!------------------contact------------------>
-<div id="contact">
-    <div class="container">
-        <div class="row">
-            <div class="contact-left">
-                <h1 class="sub-title">Contact Me</h1>
-                <p><i class="fa-solid fa-paper-plane"></i>ccorrigan0709@gmail.com</p>
-                <p><i class="fa-solid fa-phone"></i>4047598169</p>
-                <div class = "social-icons">
-                    <a href="https://www.linkedin.com/in/connor-corrigan-93b747200/">
-                        <i class="fa-brands fa-linkedin"></i></a>
-                </div>
-                <a href="images/Resume for Snowflake.docx (2).pdf" download class="btn btn2 ">Download CV</a>
-            </div>
-            <div class="contact-right">
-                <form action="https://formspree.io/f/mldjzrrn" method="POST">
-                    <input type="text" name="Name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                    <button type="submit" class="btn btn2">Submit</button>
-                </form>
-                <span id="msg">Message Sent Successfully</span>
-            </div>
-        </div>
-    </div>
-    <div class="copyright">
-        <p>Copyright @ Connor</p>
-    </div>
-</div>
-
-
-
-
 <script>
-var tablinks = document.getElementsByClassName("tab-links");
-var tabcontents = document.getElementsByClassName("tab-contents");
-
-function opentab(tabname, event) {
-    for (let tablink of tablinks) {
-        tablink.classList.remove("active-link");
+function typeText(element, htmlBefore, text, speed, color, callback) {
+    let i = 0;
+    function typing() {
+        let displayText = text.substring(0, i);
+        if (color) {
+            displayText = `<span style="color:${color}">${displayText}</span>`;
     }
-    for (let tabcontent of tabcontents) {
-        tabcontent.classList.remove("active-tab");
+        element.innerHTML = htmlBefore + displayText + '<span class="typing-cursor">|</span>';
+        if (i < text.length) {
+            i++;
+            setTimeout(typing, speed);
+        } else {
+            if (callback) callback();
+        }
     }
-    event.currentTarget.classList.add("active-link");
-    document.getElementById(tabname).classList.add("active-tab");
-}
-    
-</script>
-
-<script>
-    var sidemenu = document.getElementById("sidemenu");
-
-    function openmenu() {
-        sidemenu.style.right = "0";
-    }
-    function closemenu() {
-        sidemenu.style.right = "-200px";
+    typing();
     }
 
-</script>
+window.onload = function() {
+    const typingSpeed = 120;
 
-<script>
-    document.querySelector("form").addEventListener("submit", function(e) {
-        e.preventDefault(); // Prevent default form submission
+    const connor = "Connor Corrigan";
+    const greetEnd = "Welcome to my Website!";
+
+    const greetElem = document.getElementById("typing-greeting");
+    greetElem.innerHTML = "";
     
-        const form = this;
-        const msg = document.getElementById("msg");
-    
-        // Hide the message initially just to be safe
-        msg.style.display = "none";
-    
-        // Send the form data using Formspree
-        fetch(form.action, {
-            method: form.method,
-            body: new FormData(form),
-            headers: {
-                'Accept': 'application/json'
-            }
-        }).then(response => {
-            if (response.ok) {
-                // Clear the form fields
-                form.reset();
-    
-                // Show the success message
-                msg.innerText = "Message Sent Successfully";
-                msg.style.display = "block";
-    
-                // Hide the message after 5 seconds
-                setTimeout(() => {
-                    msg.style.display = "none";
-                }, 5000);
-            } else {
-                msg.innerText = "Something went wrong.";
-                msg.style.display = "block";
-            }
-        }).catch(error => {
-            msg.innerText = "Failed to send message.";
-            msg.style.display = "block";
-        });
+    // Wait for fade-in to finish: 1s (animation) + 0.2s (delay) = 1.2s
+    setTimeout(function() {
+        // Step 1: Type "Connor Corrigan" in red
+        typeText(greetElem, "", connor, typingSpeed, "#ff004f", function() {
+            // Step 2: Type "Welcome to my Website!" on the next line
+            typeText(
+                greetElem,
+                `<span style="color:#ff004f;">${connor}</span><br>`,
+                greetEnd,
+                typingSpeed,
+                null,
+                function() {
+                    // Leave the cursor at the end after all typing is done
+                    greetElem.innerHTML =
+                        `<span style="color:#ff004f;">${connor}</span><br>` +
+                        greetEnd +
+                        '<span class="typing-cursor">|</span>';
+                }
+            );
     });
+    }, 1200);
+};
     </script>
-    
-    
-
-</body>
-</html>
-

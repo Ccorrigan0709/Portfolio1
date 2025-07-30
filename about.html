@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connor Corrigan | About</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/d99f3219d2.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<nav>
+    <div class="logo-group">
+        <span class="logo-text">Connor Corrigan</span>
+        <span class="logo-typing">Software Engineer</span>
+    </div>
+    <ul id="sidemenu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact Me</a></li>
+    </ul>
+    <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+</nav>
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.jpg" alt="Connor Corrigan">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p class="hello">
+                    Hello! I’m <span class="highlight" style="--reveal-delay: 0s;">Connor Corrigan</span>, a passionate software developer currently studying Computer Science as an undergraduate at the Georgia Institute of Technology. I specialize in <span class="highlight" style="--reveal-delay: 0.2s;">web and mobile development</span>, leveraging languages like Java, Python, Javascript, C, and frameworks such as React, React Native, Android Studio, and Tensorflow. My goal is to create <span class="highlight" style="--reveal-delay: 0.4s;">scalable applications</span> that can benefit users around the globe.<br><br>
+                    When I'm not coding, you can find me contributing to open-source projects, wrestling, or playing tennis with my friends. I am always eager to learn, grow, and collaborate with like-minded developers to create <span class="highlight" style="--reveal-delay: 0.6s;">impactful software</span>. If you're interested in collaborating or have any questions, don't hesitate to reach out!
+                </p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Web Development</span><br>HTML, CSS, Javascript, Typescript</li>
+                        <li><span>App Development</span><br>React Native, Android Studio</li>
+                        <li><span>Languages</span><br>Java, Python, C, C++, React</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>May, 2025 - August, 2025</span><br>Data Analyst Intern, Synovus</li>
+                        <ul style ="margin-left: 20px; margin-top: 5px; font-size: 14px; color: #ababab;">
+                            <li>Leveraged Databricks and PySpark to perform large-scale data transformations and analytics for executive reporting.</li>
+                            <li>Built dashboards and reports using tools such as SQL, Python, and Power BI to assist in data-driven decision-making across business units</li>
+                            <li>Wrote modular Python scripts for ad hoc data analysis, significantly reducing manual processing time for the analytics team.</li>
+                        </ul>
+                        <li><span>2023-2024</span><br>Systems Programming Teaching Assistant
+                            <ul style="margin-left: 20px; margin-top: 5px; font-size: 14px; color: #ababab;">
+                                <li>Selected as 1 of 3 teaching assistants for Systems Programming in C to undergraduate students.</li>
+                                <li>Provided individualized assistance to students debugging code and guidance on assignments and projects.</li>
+                                <li>Led complex programming concept review sessions, including memory management, pointers, and system calls.</li>
+                            </ul>
+                        </li>
+                        <li><span>June, 2023 - August,2023</span><br>Software Engineer at Computer Futures, Sthree</li>
+                            <ul style="margin-left: 20px; margin-top: 5px; font-size: 14px; color: #ababab;">
+                                <li>Engineered automated scripts in Python and SQL to efficiently process and match thousands of STEM candidate profiles to roles at leading fintech, banking, and cryptocurrency firms, increasing candidate placement speed by 40%.</li>
+                                <li>Enhanced database schema designs, implemented advanced indexing strategies, and reduced query execution times by 30%, ensuring rapid retrieval of candidate data and improving overall system scalability. </li>
+                                <li>Integrated analytics dashboards and reporting tools to provide actionable insights for recruitment strategies.</li>
+                            </ul>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2024-2026</span><br>Georgia Institute of Technology - Bachelor of Science in Computer Science
+                        <br><em>Dean's List</em></li>
+                        <li><span>Relevant Course Work:</span><br>
+                            <ul style="font-size: 14px; color: #ababab;">
+                                <li><em>Data Structures and Algorithms</em>, <em>Linear Algebra</em>, <em>Computer Organization and Programming</em>,</li>
+                                <li><em>Objects and Design</em>, <em>Information Technology</em>, <em>Discrete Mathematics</em>, <em>Systems Programming</em></li>
+                            </ul>
+                        </li>
+                        <li><span>Involvement:</span><br>
+                            <p>Association of Computing Machinery, Codehub(Developer), Japanese Speaking Club (Secretary), Georgia Tech International Ambassador(Head of Finance)
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+const tabLinks = document.querySelectorAll('.tab-links');
+const tabContents = document.querySelectorAll('.tab-contents');
+
+tabLinks.forEach((tab, idx) => {
+    tab.addEventListener('click', function() {
+        // Remove active classes from all tabs and contents
+        tabLinks.forEach(t => t.classList.remove('active-link'));
+        tabContents.forEach(c => c.classList.remove('active-tab'));
+        // Add active to the clicked tab and corresponding content
+        tab.classList.add('active-link');
+        tabContents[idx].classList.add('active-tab');
+    });
+});
+</script>
+</body>
+</html> 

@@ -145,21 +145,24 @@ nav ul li a:hover::after{
     font-weight: 500;
     cursor: pointer; 
     position: relative;
+    color: #fff;
+    display: inline-block;
 }
 
 .tab-links::after{
     content: '';
+    display: block;
     width: 0;
     height: 3px;
     background: #ff004f;
     position: absolute;
     left: 0;
-    bottom: -8px;
-    transition: 0.5s;
+    bottom: -6px;
+    transition: width 0.5s;
 }
 
-.tab-links.active-link::after{
-    width: 50%;
+.tab-links:hover::after{
+    width: 100%;
 }
 
 .tab-contents ul li{
@@ -172,6 +175,29 @@ nav ul li a:hover::after{
     font-size: 14px;
 }
 
+.highlight {
+    /* No background-color! */
+    background: linear-gradient(90deg, rgba(255, 111, 0, 0.685) 0 0);
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    background-position: left;
+    color: inherit; /* Inherit the surrounding text color */
+    padding: 0.02em 0.2em;
+    border-radius: 0.15em;
+    position: relative;
+    overflow: hidden;
+    animation: highlight-wipe 1s cubic-bezier(.77,0,.18,1) forwards;
+    animation-delay: var(--reveal-delay, 0s);
+}
+
+@keyframes highlight-wipe {
+    from {
+        background-size: 0% 100%;
+    }
+    to {
+        background-size: 100% 100%;
+    }
+}
 /* Style each block with uniform spacing */
 .year,
 .school-name,
@@ -267,7 +293,6 @@ nav ul li a:hover::after{
 
 
 .work {
-    background: #262626;
     border-radius: 10px;
     padding: 20px;
     text-align: center;
@@ -279,7 +304,7 @@ nav ul li a:hover::after{
     flex-direction: column;
     justify-content: center; /* Centers text inside */
     align-items: center;
-    transition: background 0.5s, transform 0.5s;
+    transition: transform 0.3s ease;
     box-sizing: border-box; /* Ensures padding doesn’t affect size */
 }
 
@@ -292,11 +317,27 @@ nav ul li a:hover::after{
 
 
 .work:hover {
-    background: #ff004f;
-    transform: translateY(-5px);
+    /* Remove any hover effects on the container */
 }
 
+.work img {
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
 
+.work img:hover {
+    transform: scale(1.05);
+}
+
+.work img:hover + div,
+.work div:hover {
+    height: 100% !important;
+    opacity: 1 !important;
+}
+
+.work div {
+    transition: height 0.5s ease, opacity 0.5s ease !important;
+}
 
 
 .layer {
@@ -415,7 +456,9 @@ form .btn2{
     padding: 25px 0;
     background: #262626;
     font-weight: 300;
-    margin-top: 20 px; 
+    margin-top: auto;
+    position: sticky;
+    bottom: 0;
 }
 
 .copyright i{
@@ -501,5 +544,41 @@ nav .fa-solid{
     max-width: 300px; /* Prevents it from getting too large */
     margin: 0 auto; /* Centers it horizontally */
     display: block; /* Ensures margin auto works */
+}
+
+.logo-group {
+    display: flex !important;
+    align-items: center !important;
+    flex-direction: row !important;
+    gap: 10px;
+}
+
+.logo-text {
+    font-weight: bold;
+    color: #ff004f;
+    font-size: 2rem;
+    margin-left: 20px;
+    margin-right: 0;
+    display: inline-block !important;
+}
+
+.logo-typing {
+    font-weight: normal !important;
+    font-size: 1.5rem; /* Same size as in index.html */
+    color: #fff;
+    vertical-align: middle;
+    display: inline-block !important;
+    margin-left: 10px; /* Same margin as in index.html */
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* logo left, menu right */
+    width: 100%;
+}
+
+.tab-links.active-link {
+    color: #ff004f;
+    font-weight: bold;
 }
 
