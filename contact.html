@@ -30,11 +30,13 @@
             <div class="contact-left">
                 <h1 class="sub-title">Contact Me</h1>
                 <p><i class="fa-solid fa-paper-plane"></i>ccorrigan0709@gmail.com</p>
-                <p><i class="fa-solid fa-phone"></i>+1 4047698169</p>
-                <div class="social-icons">
-                    <a href="https://www.linkedin.com/in/connor-corrigan-93b747200/">
-                        <i class="fa-brands fa-linkedin"></i></a>
-                </div>
+                <p>
+                    <i class="fa-solid fa-phone"></i>+1 4047698169
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/connor-corrigan-93b747200/">
+                            <i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </p>
                 <a href="images/2025_Resume.pdf" download="Connor_Corrigan_Resume.pdf" class="btn btn2" onclick="downloadCV(event)">
                     <i class="fa-solid fa-download"></i> Download CV
                 </a>
@@ -44,7 +46,12 @@
                     <input type="text" name="Name" placeholder="Your Name" required>
                     <input type="email" name="email" placeholder="Your Email" required>
                     <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                    <button type="submit" class="btn btn2">Submit</button>
+                    <div class="button-group">
+                        <button type="submit" class="btn btn2">Submit</button>
+                        <a href="images/2025_Resume.pdf" download="Connor_Corrigan_Resume.pdf" class="btn btn2" onclick="downloadCV(event)">
+                            <i class="fa-solid fa-download"></i> Download CV
+                        </a>
+                    </div>
                 </form>
                 <span id="msg">Message Sent Successfully</span>
             </div>
