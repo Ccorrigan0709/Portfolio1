@@ -598,21 +598,21 @@ nav .fa-solid{
     
     /* Mobile contact layout */
     .contact-left {
-        text-align: center;
+        text-align: left;
     }
     
     .contact-left p {
         display: flex;
         align-items: center;
-        justify-content: center;
         margin: 10px 0;
+        justify-content: flex-start;
     }
     
     /* LinkedIn icon positioning for mobile */
     .social-icons {
         display: inline-flex;
         align-items: center;
-        margin-right: 10px;
+        margin-left: 10px;
     }
     
     /* Mobile form layout */
@@ -627,26 +627,11 @@ nav .fa-solid{
         margin-top: 10px;
     }
     
-    /* Move Download CV button next to Submit for mobile */
+    /* Mobile button layout */
     .contact-left .btn.btn2 {
-        display: inline-block;
-        margin: 10px 5px;
-        width: auto;
-        min-width: 120px;
-    }
-    
-    /* Button group layout for mobile */
-    .button-group {
-        display: flex;
-        gap: 10px;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    
-    .button-group .btn.btn2 {
-        flex: 1;
-        min-width: 120px;
-        text-align: center;
+        display: block;
+        margin: 20px 0;
+        width: 100%;
     }
 }
 
