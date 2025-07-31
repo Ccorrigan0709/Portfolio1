@@ -544,6 +544,8 @@ nav .fa-solid{
         position: absolute;
         right: 20px;
         top: 60px;
+        z-index: 10000;
+        cursor: pointer;
     }
 
     nav ul{
