@@ -519,8 +519,8 @@ nav .fa-solid{
         top: 80px;
         left: 50%;
         transform: translateX(-50%);
-        width: 200px;
-        height: 200px;
+        width: 250px;
+        height: 250px;
         background-image: url(images/headshot_circle.jpg);
         background-size: cover;
         background-position: center;
@@ -529,7 +529,7 @@ nav .fa-solid{
     }
     
     .header-text{
-        margin-top: 320px;
+        margin-top: 370px;
         font-size: 16px;
         padding-top: 20px;
         position: relative;

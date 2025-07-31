@@ -180,5 +180,14 @@ document.addEventListener('DOMContentLoaded', function() {
             navigateWithTransition(this.href);
         });
     });
+    
+    // Ensure hamburger menu works
+    const hamburgerMenu = document.querySelector('.fa-solid.fa-bars');
+    if (hamburgerMenu) {
+        hamburgerMenu.addEventListener('click', function(e) {
+            e.stopPropagation();
+            openmenu();
+        });
+    }
 });
     </script>
