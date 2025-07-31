@@ -520,7 +520,10 @@ nav .fa-solid{
     }
     nav .fa-solid{
         display: block;
-        font-size: 25px; 
+        font-size: 25px;
+        position: absolute;
+        right: 20px;
+        top: 20px;
     }
 
     nav ul{
@@ -567,6 +570,31 @@ nav .fa-solid{
     .contact-left, .contact-right{
         flex-basis: 100%;
     }
+    
+    /* Mobile logo layout */
+    .logo-group {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 5px;
+    }
+    
+    .logo-text {
+        font-size: 1.5rem !important;
+        margin-left: 20px;
+        margin-bottom: 0;
+    }
+    
+    .logo-typing {
+        font-size: 1.2rem !important;
+        margin-left: 20px;
+        margin-top: 0;
+    }
+    
+    /* Mobile navigation positioning */
+    nav {
+        position: relative;
+        padding: 10px 0;
+    }
 }
 
 #msg{
@@ -606,6 +634,7 @@ nav .fa-solid{
     display: inline-block !important;
     margin-left: 10px; /* Same margin as in index.html */
 }
+
 nav {
     display: flex;
     align-items: center;
