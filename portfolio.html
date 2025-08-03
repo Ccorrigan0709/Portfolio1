@@ -238,6 +238,10 @@ function updatePlastyAIImage() {
 
 // Close modal when clicking anywhere
 document.getElementById('plastyAIModal').addEventListener('click', function(e) {
+    // Don't close if clicking on navigation buttons
+    if (e.target.tagName === 'BUTTON') {
+        return;
+    }
     closePlastyAIModal();
 });
 
@@ -294,6 +298,10 @@ function updateWanderSyncImage() {
 
 // Close WanderSync modal when clicking anywhere
 document.getElementById('wanderSyncModal').addEventListener('click', function(e) {
+    // Don't close if clicking on navigation buttons
+    if (e.target.tagName === 'BUTTON') {
+        return;
+    }
     closeWanderSyncModal();
 });
 
@@ -346,6 +354,10 @@ function updateWordDefinerImage() {
 
 // Close Word Definer modal when clicking anywhere
 document.getElementById('wordDefinerModal').addEventListener('click', function(e) {
+    // Don't close if clicking on navigation buttons
+    if (e.target.tagName === 'BUTTON') {
+        return;
+    }
     closeWordDefinerModal();
 });
 
