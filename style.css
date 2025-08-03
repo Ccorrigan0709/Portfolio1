@@ -658,6 +658,36 @@ nav .fa-solid{
         margin: 20px 0;
         width: 100%;
     }
+    
+    /* Modal mobile layout */
+    #plastyAIImageContainer,
+    #wanderSyncImageContainer,
+    #wordDefinerImageContainer {
+        flex-direction: column !important;
+        gap: 20px !important;
+        max-height: none !important;
+        padding: 20px !important;
+    }
+    
+    #plastyAIDescription,
+    #wanderSyncDescription,
+    #wordDefinerDescription {
+        max-width: 100% !important;
+        text-align: center !important;
+        order: 2 !important;
+    }
+    
+    #plastyAIImageContainer > div:last-child,
+    #wanderSyncImageContainer > div:last-child,
+    #wordDefinerImageContainer > div:last-child {
+        order: 1 !important;
+    }
+    
+    #plastyAICurrentImage,
+    #wanderSyncCurrentImage,
+    #wordDefinerCurrentImage {
+        max-height: 60vh !important;
+    }
 }
 
 #msg{
