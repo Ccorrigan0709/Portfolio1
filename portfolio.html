@@ -236,11 +236,9 @@ function updatePlastyAIImage() {
     counter.textContent = currentPlastyAIImageIndex + 1;
 }
 
-// Close modal when clicking outside
+// Close modal when clicking anywhere
 document.getElementById('plastyAIModal').addEventListener('click', function(e) {
-    if (e.target === this) {
-        closePlastyAIModal();
-    }
+    closePlastyAIModal();
 });
 
 // Keyboard navigation
@@ -294,11 +292,9 @@ function updateWanderSyncImage() {
     counter.textContent = currentWanderSyncImageIndex + 1;
 }
 
-// Close WanderSync modal when clicking outside
+// Close WanderSync modal when clicking anywhere
 document.getElementById('wanderSyncModal').addEventListener('click', function(e) {
-    if (e.target === this) {
-        closeWanderSyncModal();
-    }
+    closeWanderSyncModal();
 });
 
 // Keyboard navigation for WanderSync modal
@@ -348,11 +344,9 @@ function updateWordDefinerImage() {
     counter.textContent = currentWordDefinerImageIndex + 1;
 }
 
-// Close Word Definer modal when clicking outside
+// Close Word Definer modal when clicking anywhere
 document.getElementById('wordDefinerModal').addEventListener('click', function(e) {
-    if (e.target === this) {
-        closeWordDefinerModal();
-    }
+    closeWordDefinerModal();
 });
 
 // Keyboard navigation for Word Definer modal
