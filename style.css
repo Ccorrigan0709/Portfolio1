@@ -656,9 +656,9 @@ nav .fa-solid{
         width: 100% !important;
         max-width: 300px !important;
         height: auto !important;
-        margin: 0 auto 0 -40px !important;
+        margin: 0 auto 0 -15px !important;
         display: block !important;
-        transform: translateX(-15px) !important;
+        transform: translateX(-8px) !important;
     }
     
     /* Mobile logo layout */
