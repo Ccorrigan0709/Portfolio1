@@ -316,6 +316,8 @@ nav ul li a:hover::after{
     gap: 20px; /* Keeps spacing consistent */
     flex-wrap: wrap; /* Ensures responsiveness */
     align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .sub-title {
@@ -333,15 +335,15 @@ nav ul li a:hover::after{
     padding: 20px;
     text-align: center;
     color: white;
-    flex: 1;
-    min-width: 400px; /* Increase the minimum width */
-    max-width: 600px; /* Allows more horizontal space */
+    flex: 0 0 auto;
+    min-width: 300px; /* Adjusted for better mobile compatibility */
+    max-width: 300px; /* Consistent sizing */
     display: flex;
     flex-direction: column;
     justify-content: center; /* Centers text inside */
     align-items: center;
     transition: transform 0.3s ease;
-    box-sizing: border-box; /* Ensures padding doesn’t affect size */
+    box-sizing: border-box; /* Ensures padding doesn't affect size */
 }
 
 .work p {
@@ -594,6 +596,31 @@ nav .fa-solid{
 
     .contact-left, .contact-right{
         flex-basis: 100%;
+    }
+    
+    /* Mobile portfolio layout */
+    .work-list {
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 30px !important;
+        padding: 0 20px !important;
+    }
+    
+    .work {
+        min-width: 100% !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 15px !important;
+    }
+    
+    .work img {
+        width: 100% !important;
+        max-width: 300px !important;
+        height: auto !important;
+        margin: 0 auto !important;
+        display: block !important;
     }
     
     /* Mobile logo layout */
