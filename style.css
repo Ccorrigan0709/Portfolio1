@@ -598,21 +598,58 @@ nav .fa-solid{
         flex-basis: 100%;
     }
     
+    /* Mobile container adjustments */
+    .container {
+        padding: 10px 5% !important;
+    }
+    
+    /* Mobile portfolio section */
+    #portfolio {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        width: 100% !important;
+    }
+    
+    #portfolio .container {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 10px 5% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+    
     /* Mobile portfolio layout */
     .work-list {
         flex-direction: column !important;
         align-items: center !important;
         justify-content: center !important;
         gap: 30px !important;
-        padding: 0 20px !important;
+        padding: 0 !important;
+        width: 100% !important;
+        margin: 0 !important;
     }
     
     .work {
         min-width: 100% !important;
         max-width: 100% !important;
         width: 100% !important;
-        margin: 0 !important;
+        margin: 0 auto !important;
         padding: 15px !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+    
+    .work > div {
+        width: 100% !important;
+        max-width: 300px !important;
+        margin: 0 auto !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
     }
     
     .work img {
