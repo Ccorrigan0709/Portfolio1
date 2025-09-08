@@ -608,11 +608,12 @@ nav .fa-solid{
     }
     
     .header-text{
-        margin-top: 370px;
+        margin-top: 350px;
         font-size: 16px;
         padding-top: 20px;
         position: relative;
         z-index: 2;
+        text-align: center;
     }
     .header-text h1{
         font-size: 30px;
