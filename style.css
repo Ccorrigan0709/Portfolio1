@@ -579,19 +579,6 @@ nav .fa-solid{
     }
     
     /* Mobile home screen layout */
-    #header::after {
-        content: '';
-        position: absolute;
-        top: 80px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 250px;
-        height: 250px;
-        background: #000;
-        border-radius: 50%;
-        z-index: 1;
-    }
-    
     #header::before {
         content: '';
         position: absolute;
@@ -600,15 +587,15 @@ nav .fa-solid{
         transform: translateX(-50%);
         width: 250px;
         height: 250px;
-        background-image: url(images/headshot2.jpg); /* Updated image */
+        background-image: url(images/headshot2.jpg);
         background-size: cover;
         background-position: center;
         border-radius: 50%;
-        z-index: 2;
+        z-index: 1;
     }
     
     .header-text{
-        margin-top: 400px;
+        margin-top: 370px;
         font-size: 16px;
         padding-top: 20px;
         position: relative;
